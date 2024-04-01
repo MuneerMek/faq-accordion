@@ -1,0 +1,200 @@
+/* Fonts */
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/WorkSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: italic;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  background: url(assets/images/background-pattern-mobile.svg)
+    var(--clr-light-pink);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  font-family: "Work Sans";
+  min-height: 100vh;
+  min-width: 100vw;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Custom propertes */
+
+:root {
+  --clr-black: 0, 100%, 0%;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+}
+
+/* Utility classes */
+
+.box {
+  padding-inline: 2rem;
+  margin-inline: 2rem;
+  border-radius: 1rem;
+  background-color: var(--clr-white);
+}
+
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+
+.fs-1 > *:where(:not(:first-child)) {
+  margin-top: 0.65rem;
+}
+.fs-2 > *:where(:not(:first-child)) {
+  margin-top: 1rem;
+}
+.fs-3 > *:where(:not(:first-child)) {
+  margin-top: 1.5rem;
+}
+.fs-4 > *:where(:not(:first-child)) {
+  margin-top: 2rem;
+}
+
+.fs-400 {
+  font-size: 1rem;
+}
+.fs-500 {
+  font-size: 1.5rem;
+}
+.fs-600 {
+  font-size: 2rem;
+}
+.fs-700 {
+  font-size: 2.5rem;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+/* Page styles */
+
+header {
+}
+
+.faq-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid hsl(var(--clr-black), 0.2);
+}
+.faq-item > .grid {
+  grid-template-columns: 7fr 1fr;
+}
+.faq-item > .grid > img {
+  justify-self: end;
+}
+
+/* Media queries */
+
+@media (min-width: 40rem) {
+  body {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    max-width: 50rem;
+    border-radius: 1rem;
+  }
+}
