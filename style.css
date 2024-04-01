@@ -58,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-inline: 2rem;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -125,7 +126,6 @@ textarea:not([rows]) {
 .box {
   max-width: 50rem;
   padding: 2rem 2rem 0 2rem;
-  margin-inline: 2rem;
   border-radius: 1rem;
   background-color: var(--clr-white);
 }
