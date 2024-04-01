@@ -76,7 +76,7 @@ h1,
 h2,
 h3,
 h4 {
-  /* text-wrap: balance; */
+  text-wrap: balance;
 }
 
 /* A elements that don't have a class get default styles */
@@ -201,6 +201,7 @@ header > * {
 }
 .faq-item > .grid > img {
   justify-self: end;
+  cursor: pointer;
 }
 .faq-item > .grid > * {
   align-self: center;
