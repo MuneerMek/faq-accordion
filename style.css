@@ -198,13 +198,22 @@ header > * {
 }
 .faq-item > .grid {
   grid-template-columns: 1fr 5rem;
+  cursor: pointer;
 }
 .faq-item > .grid > img {
   justify-self: end;
-  cursor: pointer;
 }
 .faq-item > .grid > * {
   align-self: center;
+}
+
+.header-img:hover,
+.header-img:focus {
+  color: #9232ba;
+}
+
+.info {
+  max-width: 44rem;
 }
 
 /* Media queries */
